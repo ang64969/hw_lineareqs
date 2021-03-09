@@ -7,11 +7,8 @@ k3 = 100; % N/m
 k4 = 75;  % N/m
 m = 0.5;  % kg
 L = 0.25; % m
-g=-9.8;
-Matrix= [0 0 k2 (-k2-k1); 0 (k3-k2) (-k3-k2) k2; k4 (-k4-k3) k3 0; -k4 k4 0 0]
-%Y= [y4; y3; y2; y1]
-B=[-k2*L-1.5*k1+k1*L+m*g; m*g-k3*L+k2*L; m*g-k4*L+k3*L; m*g+k4*L]
-Y=inv(Matrix)*B
+
+[0 0 k2 (-k2-k1); 0 (k3-k2) (-k3-k2) k2; k4 (-k4-k3) k3 0; -k4 k4 0 0]
 
 %% Problem 2 -- write and solve the linear equations for circuit
 R1 = 1;  % Ohms
